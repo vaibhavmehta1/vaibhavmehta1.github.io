@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaibhav Mehta</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.2/css/academicons.min.css"
+    crossorigin="anonymous" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #333;
+      background: #fdfdfd;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fdfdfd;
+      padding: 2em;
+      border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      padding: 2em;
+      margin: 0 auto;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .main-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 1.5em;
+      margin-top: 1em;
+      font-size: 1.4em;
+    }
+
+    .icons a {
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .icons a:hover {
+      color: #1565c0;
+    }
+
+    #publications {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2em;
+    }
+
+    #publications h2 {
+      font-weight: 600;
+      margin-bottom: 1em;
+    }
+
+    .publication {
+      margin-bottom: 0.5em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5em;
+      font-size: 0.9em;
+      color: #777;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="image.jpg" alt="Vaibhav Mehta" class="avatar" />
+      <div class="main-text">
+        <h1>Hi, I'm Vaibhav</h1>
+        <p>I am a Computer Science PhD student at Cornell University, advised by <a
+            href="https://www.justinhsu.net/">Justin Hsu</a>. I work on understanding symmetry properties of
+          programs&mdash;properties that remain invariant under certain transformations. I hope to leverage these
+          properties
+          to make programs more efficient and easier to reason about.
+        </p>
+        <p>I am broadly interested in programming languages, formal methods, and their applications across domains.</p>
+        <p>Previously, I was an undergraduate at Princeton University, where I had the privilege of working with <a
+            href="https://www.cs.princeton.edu/~dpw/">David Walker</a> and <a
+            href="https://www.cs.princeton.edu/~zkincaid/">Zak Kincaid</a>. In the summer of 2022, interned at ETH
+          Zurich
+          in 2022 with <a href="https://www.pm.inf.ethz.ch/people/personal/pmueller-pers.html">Peter Müller</a>.</p>
+        <div class="icons">
+          <a href="mailto:vm353@cornell.edu" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vaibhav-mehta-5a1252166/" title="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=hbccgWgAAAAJ" title="Google Scholar"><i
+              class="ai ai-google-scholar"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="publication">
+      <em>Type Systems for Exchangeability</em>
+      <br />
+      <u>Vaibhav Mehta</u>, Justin Hsu
+      <br />
+      In Submission
+    </div>
+    <div class="publication">
+      <em>A Hoare Logic for Symmetry Properties</em>
+      <br />
+      <u>Vaibhav Mehta</u>, Justin Hsu
+      <br />
+      OOPSLA 2025
+    </div>
+    <div class="publication">
+      <em>A Generic Methodology for the Modular Verification of Security Protocol Implementations</em>
+      <br />
+      Linard Arquint, Malte Schwerhoff, <u>Vaibhav Mehta</u>, Peter Müller
+      <br />
+      CCS 2023 <a href="https://arxiv.org/abs/2212.02626">[arXiv]</a> <a
+        href="https://dl.acm.org/doi/abs/10.1145/3576915.3623105">[DOI]</a>
+    </div>
+    <div class="publication">
+      <em>SwitchLog: A Logic Programming Language for Network Switches</em>
+      <br />
+      Vaibhav Mehta, Devon Loehr, John Sonchack, David Walker
+      <br />
+      PADL 2023 <a href="https://dblp.org/rec/conf/padl/MehtaLSW23.html">[DBLP]</a> <a
+        href="https://dl.acm.org/doi/10.1007/978-3-031-24841-2_12">[DOI]</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Last updated: July 2025</p>
+  </footer>
+</body>
+
+</html>
