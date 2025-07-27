@@ -75,23 +75,25 @@
       color: #1565c0;
     }
 
-#publications {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2em 2em 2em;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
+    #publications {
+      margin: 2em 0;
+      padding: 0;
+    }
 
     #publications h2 {
+      font-weight: 1000;
+      margin-bottom: 5em;
+    }
+
+    #publications h1 {
       font-weight: 600;
       margin-bottom: 1em;
+      /* ensures spacing under heading */
     }
 
     .publication {
-      margin-bottom: 0.5em;
+      margin-top: 1.5em;
+      line-height: 1.6em;
     }
 
     footer {
@@ -129,44 +131,52 @@
               class="fab fa-linkedin"></i></a>
           <a href="https://scholar.google.com/citations?user=hbccgWgAAAAJ" title="Google Scholar"><i
               class="ai ai-google-scholar"></i></a>
+          <a href="cv.pdf" download title="Download Resume"><i class="fas fa-file-download"></i></a>
+
         </div>
       </div>
     </div>
   </header>
+  <header>
+    <section id="publications">
+      <h1>Publications <br />
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <div class="publication">
-      <em>Type Systems for Exchangeability</em>
-      <br />
-      <u>Vaibhav Mehta</u>, Justin Hsu
-      <br />
-      In Submission
-    </div>
-    <div class="publication">
-      <em>A Hoare Logic for Symmetry Properties</em>
-      <br />
-      <u>Vaibhav Mehta</u>, Justin Hsu
-      <br />
-      ACM SIGPLAN Conference on Object Oriented Programming: Systems, Languages, and Applications (OOPSLA) 2025
-    </div>
-    <div class="publication">
-      <em>A Generic Methodology for the Modular Verification of Security Protocol Implementations</em>
-      <br />
-      Linard Arquint, Malte Schwerhoff, <u>Vaibhav Mehta</u>, Peter Müller
-      <br />
-      ACM SIGSAC Conference on Computer and Communications Security (CCS) 2023 <a href="https://arxiv.org/abs/2212.02626">[arXiv]</a> <a
-        href="https://dl.acm.org/doi/abs/10.1145/3576915.3623105">[DOI]</a>
-    </div>
-    <div class="publication">
-      <em>SwitchLog: A Logic Programming Language for Network Switches</em>
-      <br />
-      Vaibhav Mehta, Devon Loehr, John Sonchack, David Walker
-      <br />
-      International Symposium on Practical Aspects of Declarative Languages (PADL) 2023 <a href="https://dblp.org/rec/conf/padl/MehtaLSW23.html">[DBLP]</a> <a
-        href="https://dl.acm.org/doi/10.1007/978-3-031-24841-2_12">[DOI]</a>
-    </div>
-  </section>
+      </h1>
+
+      <div class="publication">
+        <em>Type Systems for Exchangeability</em>
+        <br />
+        <u>Vaibhav Mehta</u>, Justin Hsu
+        <br />
+        In Submission
+      </div>
+      <div class="publication">
+        <em>A Hoare Logic for Symmetry Properties</em>
+        <br />
+        <u>Vaibhav Mehta</u>, Justin Hsu
+        <br />
+        ACM SIGPLAN Conference on Object Oriented Programming: Systems, Languages, and Applications (OOPSLA) 2025
+      </div>
+      <div class="publication">
+        <em>A Generic Methodology for the Modular Verification of Security Protocol Implementations</em>
+        <br />
+        Linard Arquint, Malte Schwerhoff, <u>Vaibhav Mehta</u>, Peter Müller
+        <br />
+        ACM SIGSAC Conference on Computer and Communications Security (CCS) 2023 <a
+          href="https://arxiv.org/abs/2212.02626">[arXiv]</a> <a
+          href="https://dl.acm.org/doi/abs/10.1145/3576915.3623105">[DOI]</a>
+      </div>
+      <div class="publication">
+        <em>SwitchLog: A Logic Programming Language for Network Switches</em>
+        <br />
+        Vaibhav Mehta, Devon Loehr, John Sonchack, David Walker
+        <br />
+        International Symposium on Practical Aspects of Declarative Languages (PADL) 2023 <a
+          href="https://dblp.org/rec/conf/padl/MehtaLSW23.html">[DBLP]</a> <a
+          href="https://dl.acm.org/doi/10.1007/978-3-031-24841-2_12">[DOI]</a>
+      </div>
+    </section>
+  </header>
 
   <footer>
     <p>Last updated: July 2025</p>
