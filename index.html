@@ -8,7 +8,9 @@
   <title>Vaibhav Mehta</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -21,110 +23,189 @@
       box-sizing: border-box;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Source Sans Pro', sans-serif;
-      color: #333;
-      background: #fdfdfd;
-      line-height: 1.6;
+    :root {
+      color-scheme: light;
+      --bg: #f6f1ea;
+      --surface: #ffffff;
+      --surface-alt: #f9f5f0;
+      --text: #2a2622;
+      --muted: #615b53;
+      --accent: #b65b2a;
+      --accent-dark: #7c3a18;
+      --line: #e2d9cf;
     }
 
-    header {
-      background: #fdfdfd;
-      padding: 2em;
-      border-bottom: 1px solid #e0e0e0;
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      color: var(--text);
+      background: #fbf8f3;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+    }
+
+    .hero {
+      padding: 3.5em 1.5em 2em;
       display: flex;
-      align-items: center;
       justify-content: center;
     }
 
     .container {
       display: flex;
-      max-width: 1000px;
-      padding: 2em;
+      max-width: 980px;
+      padding: 0;
       margin: 0 auto;
-      gap: 2em;
+      gap: 2.5em;
       flex-wrap: wrap;
     }
 
     .avatar {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       flex-shrink: 0;
+      border: 6px solid var(--surface-alt);
     }
 
     .main-text {
       flex: 1;
-      min-width: 300px;
+      min-width: 280px;
+    }
+
+    .main-text h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      margin: 0 0 0.6em;
+      letter-spacing: 0.01em;
+    }
+
+    .main-text p {
+      margin: 0 0 1em;
+      color: var(--muted);
     }
 
     .icons {
       display: flex;
-      gap: 1.5em;
-      margin-top: 1em;
-      font-size: 1.4em;
+      gap: 1.2em;
+      margin-top: 1.2em;
+      font-size: 1.6em;
     }
 
     .icons a {
-      color: #333;
-      transition: color 0.3s;
+      color: var(--text);
+      transition: transform 0.2s ease, color 0.2s ease;
     }
 
     .icons a:hover {
-      color: #1565c0;
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 1.5em 2.5em;
     }
 
     #publications {
-      margin: 2em 0;
       padding: 0;
+      border-top: 1px solid var(--line);
+      margin-top: 1.5em;
     }
 
-    #publications h2 {
-      font-weight: 1000;
-      margin-bottom: 5em;
-    }
-
-    #publications h1 {
-      font-weight: 600;
-      margin-bottom: 1em;
-      /* ensures spacing under heading */
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin: 1.5em 0 1.2em;
+      color: var(--text);
     }
 
     .publication {
-      margin-top: 1.5em;
-      line-height: 1.6em;
+      margin-top: 1.4em;
+      padding-top: 1.2em;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .publication:first-of-type {
+      margin-top: 0;
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      color: var(--text);
+      font-style: normal;
+    }
+
+    .publication a {
+      font-weight: 600;
     }
 
     footer {
       text-align: center;
-      padding: 1.5em;
-      font-size: 0.9em;
-      color: #777;
-      border-top: 1px solid #e0e0e0;
-      margin-top: 2em;
+      padding: 2em 1.5em 2.5em;
+      font-size: 0.95em;
+      color: var(--muted);
+    }
+
+    @media (max-width: 720px) {
+      body {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding: 2.5em 1.2em 1.5em;
+      }
+
+      .container,
+      #publications {
+        padding: 0;
+      }
+
+      .avatar {
+        width: 140px;
+        height: 140px;
+      }
+
+      .main-text h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.7rem;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
+  <header class="hero">
     <div class="container">
       <img src="image.jpg" alt="Vaibhav Mehta" class="avatar" />
       <div class="main-text">
         <h1>Hi, I'm Vaibhav!</h1>
         <p>I am a Computer Science PhD student at Cornell University, advised by <a
-            href="https://www.justinhsu.net/">Justin Hsu</a>. I work on understanding symmetry properties of
-          programs&mdash;properties that are preserved by transformations. I hope to leverage these
-          properties
-          to make reasoning about programs easier and more efficient.
-        </p>
-        <p>I am broadly interested in programming languages, formal methods, and their applications across domains.</p>
+            href="https://www.justinhsu.net/">Justin Hsu</a>. I am broadly interested in programming languages, formal
+          methods, and their applications across domains.
         <p>Before Cornell, I was an undergraduate at Princeton University, where I had the privilege of working with <a
             href="https://www.cs.princeton.edu/~dpw/">David Walker</a> and <a
             href="https://www.cs.princeton.edu/~zkincaid/">Zak Kincaid</a>. In the summer of 2022, I interned at ETH
           Zurich under <a href="https://www.pm.inf.ethz.ch/people/personal/pmueller-pers.html">Peter Müller</a>.</p>
+        <p>I can be reached at <a href="mailto:vm353@cornell.edu">vm353@cornell.edu</a>.</p>
         <div class="icons">
           <a href="mailto:vm353@cornell.edu" title="Email"><i class="fas fa-envelope"></i></a>
           <a href="https://github.com/" title="GitHub"><i class="fab fa-github"></i></a>
@@ -138,53 +219,49 @@
       </div>
     </div>
   </header>
-  <header>
+  <main>
     <section id="publications">
-      <h1>Publications <br />
-
-      </h1>
+      <h2 class="section-title">Publications</h2>
 
       <div class="publication">
-        <em>Type Systems for Exchangeability</em>
+        <span class="publication-title">Type Systems for Exchangeability</span>
         <br />
         <u>Vaibhav Mehta</u>, Justin Hsu
         <br />
         In Submission
       </div>
       <div class="publication">
-        <em>A Hoare Logic for Symmetry Properties</em>
+        <span class="publication-title">A Hoare Logic for Symmetry Properties</span>
         <br />
         <u>Vaibhav Mehta</u>, Justin Hsu
         <br />
-        ACM SIGPLAN Conference on Object Oriented Programming: Systems, Languages, and Applications (OOPSLA) 2025 
+        ACM SIGPLAN Conference on Object Oriented Programming: Systems, Languages, and Applications (OOPSLA) 2025
         <br />
-         <a
-          href="https://arxiv.org/abs/2509.00587">[arXiv]</a>
+        <a href="https://arxiv.org/abs/2509.00587">[arXiv]</a>
       </div>
       <div class="publication">
-        <em>A Generic Methodology for the Modular Verification of Security Protocol Implementations</em>
+        <span class="publication-title">A Generic Methodology for the Modular Verification of Security Protocol
+          Implementations</span>
         <br />
         Linard Arquint, Malte Schwerhoff, <u>Vaibhav Mehta</u>, Peter Müller
         <br />
-        ACM SIGSAC Conference on Computer and Communications Security (CCS) 2023 
+        ACM SIGSAC Conference on Computer and Communications Security (CCS) 2023
         <br />
-        <a
-          href="https://arxiv.org/abs/2212.02626">[arXiv]</a> <a
+        <a href="https://arxiv.org/abs/2212.02626">[arXiv]</a> <a
           href="https://dl.acm.org/doi/abs/10.1145/3576915.3623105">[DOI]</a>
       </div>
       <div class="publication">
-        <em>SwitchLog: A Logic Programming Language for Network Switches</em>
+        <span class="publication-title">SwitchLog: A Logic Programming Language for Network Switches</span>
         <br />
-       <u>Vaibhav Mehta</u>, Devon Loehr, John Sonchack, David Walker
+        <u>Vaibhav Mehta</u>, Devon Loehr, John Sonchack, David Walker
         <br />
-        International Symposium on Practical Aspects of Declarative Languages (PADL) 2023 
+        International Symposium on Practical Aspects of Declarative Languages (PADL) 2023
         <br />
-        <a
-          href="https://dblp.org/rec/conf/padl/MehtaLSW23.html">[DBLP]</a> <a
+        <a href="https://dblp.org/rec/conf/padl/MehtaLSW23.html">[DBLP]</a> <a
           href="https://dl.acm.org/doi/10.1007/978-3-031-24841-2_12">[DOI]</a>
       </div>
     </section>
-  </header>
+  </main>
 
   <footer>
     <p>Last updated: July 2025</p>
