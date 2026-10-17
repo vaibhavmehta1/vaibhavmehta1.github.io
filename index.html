@@ -5,14 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="google-site-verification" content="DK1MogTtHbeDuVj5RZJquXzmSFAcxlOfs_Fxq6ToAlE" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+    integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
   <title>Vaibhav Mehta</title>
 
   <!-- Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Icons -->
@@ -30,12 +35,12 @@
       color-scheme: light;
       --bg: #ffffff;
       --surface: #ffffff;
-      --surface-alt: #f9f5f0;
+      --surface-alt: #f0efea;
       --text: #2a2622;
       --muted: #615b53;
-      --accent: #b65b2a;
-      --accent-dark: #7c3a18;
-      --line: #e2d9cf;
+      --accent: #2a2622;
+      --accent-dark: #000000;
+      --line: #e4e2dc;
     }
 
     body {
@@ -43,17 +48,21 @@
       font-family: 'Source Sans 3', sans-serif;
       font-size: 18px;
       color: var(--text);
-      background: #fbf8f3;
+      background: var(--bg);
       line-height: 1.7;
     }
 
     a {
       color: var(--accent);
-      text-decoration: none;
+      text-decoration: underline;
+      text-decoration-color: #b9b3aa;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
     }
 
     a:hover {
       color: var(--accent-dark);
+      text-decoration-color: currentColor;
     }
 
     .hero {
@@ -107,11 +116,12 @@
 
     .icons a {
       color: var(--text);
+      text-decoration: none;
       transition: transform 0.2s ease, color 0.2s ease;
     }
 
     .icons a:hover {
-      color: var(--accent);
+      color: var(--muted);
       transform: translateY(-2px);
     }
 
@@ -121,21 +131,25 @@
       padding: 0 1.5em 2.5em;
     }
 
-    #publications {
+    main section {
       padding: 0;
       border-top: 1px solid var(--line);
       margin-top: 1.5em;
     }
 
     .section-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Libre Baskerville', serif;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 1.8rem;
+      letter-spacing: 0.01em;
       margin: 1.5em 0 1.2em;
       color: var(--text);
     }
 
     .publication {
+      font-family: 'Source Serif 4', 'Times New Roman', serif;
+      font-size: 1em;
+      line-height: 1.6;
       margin-top: 1.4em;
       padding-top: 1.2em;
       border-top: 1px solid var(--line);
@@ -149,13 +163,57 @@
     }
 
     .publication-title {
-      font-weight: 700;
+      font-weight: 600;
+      font-size: 1.08em;
       color: var(--text);
       font-style: normal;
     }
 
     .publication a {
       font-weight: 600;
+      color: #1f4e8c;
+      text-decoration: none;
+    }
+
+    .publication a:hover {
+      color: #14345e;
+      text-decoration: underline;
+    }
+
+    .news-list,
+    .service-list {
+      list-style: none;
+      margin: 0 0 1em;
+      padding: 0;
+      font-family: 'EB Garamond', 'Times New Roman', serif;
+      font-size: 1.1em;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .news-list li {
+      display: grid;
+      grid-template-columns: 5.5em 1fr;
+      gap: 1em;
+      padding: 0.6em 0;
+    }
+
+    .news-list li+li {
+      border-top: 1px solid var(--line);
+    }
+
+    .news-date {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .service-list li {
+      margin-bottom: 0.6em;
+    }
+
+    .service-role {
+      font-weight: 600;
+      color: var(--text);
     }
 
     footer {
@@ -175,7 +233,7 @@
       }
 
       .container,
-      #publications {
+      main section {
         padding: 0;
       }
 
@@ -189,7 +247,7 @@
       }
 
       .section-title {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
       }
     }
   </style>
@@ -223,26 +281,39 @@
     </div>
   </header>
   <main>
+    <section id="news">
+      <h2 class="section-title">News</h2>
+      <ul class="news-list">
+        <li><span class="news-date">Aug 2026</span><span>\(\lambda_{\lambda}\) won the Best Paper Award at SIGCOMM
+            2026!</span></li>
+        <li><span class="news-date">May 2026</span><span>\(\lambda_{\lambda}\) was accepted to SIGCOMM 2026.</span></li>
+        <li><span class="news-date">Oct 2025</span><span>Presented <em>A Hoare Logic for Symmetry Properties</em> at
+            OOPSLA 2025.</span></li>
+      </ul>
+    </section>
+
     <section id="publications">
       <h2 class="section-title">Publications</h2>
- 
-       <div class="publication">
+
+      <div class="publication">
         <span class="publication-title">A SymPL Logic for Verifying Symplectic Integrators</span>
         <br />
         <u>Vaibhav Mehta</u>, Idhant Gode, and Justin Hsu
         <br />
         In Submission
       </div>
-                  <div class="publication">
+      <div class="publication">
         <span class="publication-title"> \(\lambda_{\lambda}\) : A Programming Language for Silicon Photonics</span>
         <br />
         <u>Vaibhav Mehta</u>, Arjun Devraj, Bill Owen, Justin Hsu, and Rachee Singh
         <br />
         Conference of the ACM Special Interest Group on Data Communication (SIGCOMM) 2026
         <br />
-        🏆 Best Paper Award 
+        🏆 Best Paper Award
+        <br />
+        <a href="https://dl.acm.org/doi/10.1145/3789240.3829151">[paper]</a>
       </div>
-       <div class="publication">
+      <div class="publication">
         <span class="publication-title">Type Systems for Finite Exchangeability</span>
         <br />
         <u>Vaibhav Mehta</u> and Justin Hsu
@@ -256,7 +327,7 @@
         <br />
         ACM SIGPLAN Conference on Object Oriented Programming: Systems, Languages, and Applications (OOPSLA) 2025
         <br />
-        <a href="https://arxiv.org/abs/2509.00587">[arXiv]</a>
+        <a href="https://dl.acm.org/doi/10.1145/3763080">[paper]</a>
       </div>
       <div class="publication">
         <span class="publication-title">A Generic Methodology for the Modular Verification of Security Protocol
@@ -266,8 +337,7 @@
         <br />
         ACM SIGSAC Conference on Computer and Communications Security (CCS) 2023
         <br />
-        <a href="https://arxiv.org/abs/2212.02626">[arXiv]</a> <a
-          href="https://dl.acm.org/doi/abs/10.1145/3576915.3623105">[DOI]</a>
+        <a href="https://dl.acm.org/doi/10.1145/3576915.3623105">[paper]</a>
       </div>
       <div class="publication">
         <span class="publication-title">SwitchLog: A Logic Programming Language for Network Switches</span>
@@ -276,9 +346,16 @@
         <br />
         International Symposium on Practical Aspects of Declarative Languages (PADL) 2023
         <br />
-        <a href="https://dblp.org/rec/conf/padl/MehtaLSW23.html">[DBLP]</a> <a
-          href="https://dl.acm.org/doi/10.1007/978-3-031-24841-2_12">[DOI]</a>
+        <a href="https://doi.org/10.1007/978-3-031-24841-2_12">[paper]</a>
       </div>
+    </section>
+
+    <section id="service">
+      <h2 class="section-title">Service</h2>
+      <ul class="service-list">
+        <li><span class="service-role">Subreviewer:</span> FMCAD, ESOP</li>
+        <li><span class="service-role">Artifact Evaluation Committee:</span> TACAS</li>
+      </ul>
     </section>
   </main>
 
